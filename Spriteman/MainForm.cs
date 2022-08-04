@@ -175,6 +175,10 @@ namespace Spriteman
             TransferStr(rootTag.Get<NbtString>("bbg"), richTextBox2);
             TransferI(rootTag.Get<NbtInt>("exp"), numericUpDown17);
             TransferStr(rootTag.Get<NbtString>("bgm"), richTextBox4);
+            TransferStr(rootTag.Get<NbtString>("spr"), richTextBox5);
+
+            TransferI(rootTag.Get<NbtInt>("imm"), numericUpDown10);
+            TransferI(rootTag.Get<NbtInt>("opt"), numericUpDown21);
 		}
 
 
@@ -219,7 +223,7 @@ namespace Spriteman
 			mods.Add(new NbtFloat("elec", (float)numericUpDown1.Value));
 			mods.Add(new NbtFloat("expl", (float)numericUpDown2.Value));
 			mods.Add(new NbtFloat("fire", (float)numericUpDown8.Value));
-			mods.Add(new NbtFloat("ice", (float)numericUpDown3.Value));
+            mods.Add(new NbtFloat("ice", (float)numericUpDown3.Value));
 			mods.Add(new NbtFloat("naus", (float)numericUpDown4.Value));
 			mods.Add(new NbtFloat("phys", (float)numericUpDown9.Value));
 			mods.Add(new NbtFloat("pois", (float)numericUpDown5.Value));
@@ -252,9 +256,12 @@ namespace Spriteman
 
 			rootTag.Add(new NbtString("ainame", richTextBox3.Text));
 			rootTag.Add(new NbtString("bbg", richTextBox2.Text));
-			rootTag.Add(new NbtInt("exp", (int)numericUpDown17.Value));
+            rootTag.Add(new NbtInt("exp", (int)numericUpDown17.Value));
 			rootTag.Add(new NbtString("bgm", richTextBox4.Text));
-			rootTag.Add(new NbtString("spr", richTextBox5.Text));
+            rootTag.Add(new NbtString("spr", richTextBox5.Text));
+
+            rootTag.Add(new NbtInt("imm", (int)numericUpDown10.Value));
+            rootTag.Add(new NbtInt("opt", (int)numericUpDown21.Value));
 
 			nbtFile.SaveToFile(filename, NbtCompression.GZip);
 		}
