@@ -832,13 +832,12 @@ namespace Spriteman
             // 
             // openImageDialog
             // 
-            this.openImageDialog.Filter = "All supported files|*.dat;*.bmp;*.png|Sprite files|*.dat|Image files|*.bmp;*.png|" +
-    "All files|*.*";
+            this.openImageDialog.Filter = "Mother 4 enemy file|*.edat";
             this.openImageDialog.Title = "Open Image";
             // 
             // saveImageDialog
             // 
-            this.saveImageDialog.Filter = "Mother 4 sprite|*.dat";
+            this.saveImageDialog.Filter = "Mother 4 enemy file|*.edat";
             this.saveImageDialog.Title = "Save Image";
             // 
             // importImageDialog
