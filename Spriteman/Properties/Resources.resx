@@ -130,6 +130,9 @@
   <data name="duplicateSpriteButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duplicateSpriteButton.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="importButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\importButton.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,8 +159,5 @@
   </data>
   <data name="shadow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shadow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_this" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\this.Ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

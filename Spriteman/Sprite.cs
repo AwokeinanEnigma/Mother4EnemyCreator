@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Spriteman
+namespace M4EC
 {
 	// Token: 0x0200000B RID: 11
 	public class Sprite

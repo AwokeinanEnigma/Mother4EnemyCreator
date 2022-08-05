@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Spriteman
+namespace M4EC
 {
 	// Token: 0x0200000A RID: 10
 	internal static class Program

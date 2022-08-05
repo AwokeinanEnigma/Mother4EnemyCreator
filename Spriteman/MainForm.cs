@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 using fNbt;
-using Spriteman.Exceptions;
-using Spriteman.Properties;
+using M4EC.Exceptions;
+using M4EC.Properties;
 
-namespace Spriteman
+namespace M4EC
 {
 	// Token: 0x02000008 RID: 8
 	public partial class MainForm : Form
 	{
-		// Token: 0x06000024 RID: 36 RVA: 0x0000371B File Offset: 0x0000191B
+        public static readonly string RESOURCES = "Resources" + Path.DirectorySeparatorChar;
+        public static readonly string GRAPHICS = Path.Combine(RESOURCES, "Graphics", "") + Path.DirectorySeparatorChar;
+		public static readonly string GRAPHICSENEMIES = GRAPHICS + "Enemies" + Path.DirectorySeparatorChar;
+
 		public MainForm()
 		{
 			this.InitializeComponent();
@@ -94,7 +99,7 @@ namespace Spriteman
 			{
 				try
 				{
-					this.LoadSpriteSheetFromDat(filename);
+					this.LoadEnemyDataFromEDat(filename);
 					//this.sheetBox.Size = this.image.Size;
 					this.workingFileName = filename;
 					this.isLoaded = true;
@@ -103,7 +108,7 @@ namespace Spriteman
 				}
 				catch (Exception ex)
 				{
-					MessageBox.Show(string.Format("{0}\n{1}", ex.Message, ex.StackTrace), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+					MessageBox.Show(string.Format("{0}\n{1}", ex.Message, ex.StackTrace), "Error loading EDat file. You'll have to recover manually.", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					return;
 				}
 			}
@@ -125,17 +130,26 @@ namespace Spriteman
         {
             nud.Value = (decimal)fo.Value;
         }
-        public void TransferStr(NbtString fo, RichTextBox nud)
+
+        public void TransferStr(NbtString fo, RichTextBox nud, string nameOFFIELD)
         {
-            nud.Text = fo.Value;
-		}
-		public void TransferI(NbtInt fo, NumericUpDown nud)
+            if (fo != null)
+            {
+                nud.Text = fo.Value;
+            }
+            else
+            {
+                MessageBox.Show($"Error loading field data from nbt string {nameOFFIELD}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void TransferI(NbtInt fo, NumericUpDown nud)
         {
             nud.Value = (decimal)fo.Value;
         }
 
 		// Token: 0x06000038 RID: 56 RVA: 0x0000408C File Offset: 0x0000228C
-		private void LoadSpriteSheetFromDat(string filename)
+		private void LoadEnemyDataFromEDat(string filename)
 		{
             NbtCompound rootTag = new NbtFile(filename).RootTag;
 
@@ -165,26 +179,29 @@ namespace Spriteman
             TransferB(stats.Get<NbtByte>("spd"), numericUpDown13);
 
             NbtCompound str = rootTag.Get<NbtCompound>("str");
-			TransferStr(str.Get<NbtString>("article"), richTextBox10);
-			TransferStr(str.Get<NbtString>("defeat"), richTextBox8);
-            TransferStr(str.Get<NbtString>("encounter"), richTextBox9);
-			TransferStr(str.Get<NbtString>("name"), richTextBox7);
-			TransferStr(str.Get<NbtString>("possessive"), richTextBox6);
-			TransferStr(str.Get<NbtString>("subjective"), richTextBox11);
-			TransferStr(str.Get<NbtString>("telepathy"), richTextBox12);
-			TransferStr(str.Get<NbtString>("thoughts"), richTextBox13);
+			TransferStr(str.Get<NbtString>("article"), richTextBox10, "article");
+			TransferStr(str.Get<NbtString>("defeat"), richTextBox8, "defeat");
+            TransferStr(str.Get<NbtString>("encounter"), richTextBox9, "encounter");
+			TransferStr(str.Get<NbtString>("name"), richTextBox7, "name");
+			TransferStr(str.Get<NbtString>("possessive"), richTextBox6, "possessive");
+			TransferStr(str.Get<NbtString>("subjective"), richTextBox11, "subjective");
+			TransferStr(str.Get<NbtString>("telepathy"), richTextBox12, "telepathy");
+            TransferStr(str.Get<NbtString>("thoughts"), richTextBox13, "thoughts");
+            TransferStr(str.Get<NbtString>("wasteaction"), richTextBox15, "wasteaction");
 
-            TransferStr(rootTag.Get<NbtString>("ainame"), richTextBox3);
-            TransferStr(rootTag.Get<NbtString>("bbg"), richTextBox2);
+			TransferStr(rootTag.Get<NbtString>("ainame"), richTextBox3, "ainame");
+            TransferStr(rootTag.Get<NbtString>("bbg"), richTextBox2, "bbg");
             TransferI(rootTag.Get<NbtInt>("exp"), numericUpDown17);
-            TransferStr(rootTag.Get<NbtString>("bgm"), richTextBox4);
-            TransferStr(rootTag.Get<NbtString>("spr"), richTextBox5);
+            TransferStr(rootTag.Get<NbtString>("bgm"), richTextBox4, "bgm");
+            TransferStr(rootTag.Get<NbtString>("spr"), richTextBox5, "spr");
 
             TransferI(rootTag.Get<NbtInt>("imm"), numericUpDown10);
             TransferI(rootTag.Get<NbtInt>("opt"), numericUpDown21);
             Console.WriteLine("loading sprite");
-            TransferStr(rootTag.Get<NbtString>("overworldspr"), richTextBox14);
-		}
+            TransferStr(rootTag.Get<NbtString>("overworldspr"), richTextBox14, "overworldspr");
+
+            LoadDat();
+        }
 
 
 		// Token: 0x0600003A RID: 58 RVA: 0x00004550 File Offset: 0x00002750
@@ -254,6 +271,7 @@ namespace Spriteman
 			str.Add(new NbtString("subjective", richTextBox11.Text));
 			str.Add(new NbtString("telepathy", richTextBox12.Text));
 			str.Add(new NbtString("thoughts", richTextBox13.Text));
+			str.Add(new NbtString("wasteaction", richTextBox15.Text));
 
 			rootTag.Add(mods);
 			rootTag.Add(stats);
@@ -331,5 +349,164 @@ namespace Spriteman
 		{
 
 		}
+
+				private void LoadSpriteSheetFromDat(string filename)
+		{
+			NbtCompound rootTag = new NbtFile(filename).RootTag;
+			NbtByteArray nbtByteArray = rootTag.Get<NbtByteArray>("img");
+			this.indices = nbtByteArray.ByteArrayValue;
+			NbtCompound nbtCompound = null;
+			bool useList = false;
+			NbtList nebtList = null;
+			try
+			{
+				nbtCompound = rootTag.Get<NbtCompound>("pal");
+			}
+			catch
+			{
+				useList = true;
+				nebtList = rootTag.Get<NbtList>("pal");
+			}
+			this.palettes = new List<List<Color>>();
+			if (!useList)
+			{
+				using (IEnumerator<NbtTag> enumerator = nbtCompound.Tags.GetEnumerator())
+				{
+					while (enumerator.MoveNext())
+					{
+						NbtTag nbtTag4 = enumerator.Current;
+						int[] intArrayValue = ((NbtIntArray)nbtTag4).IntArrayValue;
+						List<Color> list = new List<Color>();
+						for (int i = 0; i < intArrayValue.Length; i++)
+						{
+							Color item = Color.FromArgb(intArrayValue[i]);
+							list.Add(item);
+						}
+						this.palettes.Add(list);
+					}
+					goto IL_13F;
+				}
+			}
+			foreach (NbtTag nbtTag5 in nebtList)
+			{
+				int[] intArrayValue2 = ((NbtIntArray)nbtTag5).IntArrayValue;
+				List<Color> list2 = new List<Color>();
+				for (int j = 0; j < intArrayValue2.Length; j++)
+				{
+					Color item2 = Color.FromArgb(intArrayValue2[j]);
+					list2.Add(item2);
+				}
+				this.palettes.Add(list2);
+			}
+			IL_13F:
+			NbtCompound nbtCompound2 = rootTag.Get<NbtCompound>("spr");
+			if (nbtCompound2 != null)
+			{
+				foreach (NbtTag nbtTag6 in nbtCompound2.Tags)
+				{
+					NbtCompound nbtCompound3 = (NbtCompound)nbtTag6;
+					string name = nbtCompound3.Name;
+					int[] intArrayValue3 = nbtCompound3.Get<NbtIntArray>("crd").IntArrayValue;
+					int[] intArrayValue4 = nbtCompound3.Get<NbtIntArray>("bnd").IntArrayValue;
+					int[] intArrayValue5 = nbtCompound3.Get<NbtIntArray>("org").IntArrayValue;
+					byte[] byteArrayValue = nbtCompound3.Get<NbtByteArray>("opt").ByteArrayValue;
+					int intValue = nbtCompound3.Get<NbtInt>("frm").IntValue;
+					NbtTag nbtTag3 = nbtCompound3.Get("spd");
+					float[] array;
+					if (nbtTag3.TagType == NbtTagType.Float)
+					{
+						array = new float[]
+						{
+							nbtTag3.FloatValue
+						};
+					}
+					else
+					{
+						NbtTag[] array2 = nbtCompound3.Get<NbtList>("spd").ToArray();
+						array = new float[array2.Length];
+						for (int k = 0; k < array2.Length; k++)
+						{
+							array[k] = array2[k].FloatValue;
+						}
+					}
+					Point coords = new Point(intArrayValue3[0], intArrayValue3[1]);
+					Size bounds = new Size(intArrayValue4[0], intArrayValue4[1]);
+					Point origin = new Point(intArrayValue5[0], intArrayValue5[1]);
+					bool flipX = byteArrayValue[0] == 1;
+					bool flipY = byteArrayValue[1] == 1;
+					int mode = (int)byteArrayValue[2];
+					Sprite sprite = new Sprite(name, coords, bounds, origin, intValue, array, flipX, flipY, mode);
+					//this.AddSpriteRow(sprite);
+				}
+			}
+			int intValue2 = rootTag.Get<NbtInt>("w").IntValue;
+			int num = this.indices.Length / intValue2;
+			this.image = new Bitmap(intValue2, num);
+			using (Graphics.FromImage(this.image))
+			{
+				for (int l = 0; l < num; l++)
+				{
+					for (int m = 0; m < intValue2; m++)
+					{
+						List<Color> list3 = this.palettes[0];
+						int index = (int)this.indices[l * intValue2 + m];
+						this.image.SetPixel(m, l, list3[index]);
+					}
+				}
+			}
+            image = new Bitmap(image, new Size(image.Width * 2, image.Height * 2));
+			// InterpolationMode.NearestNeighbor;
+		}
+
+                private void picBox_Paint_1(object sender, PaintEventArgs e)
+                {
+                    e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
+                    if (image != null)
+                    {
+                        /*e.Graphics.DrawImage(
+                            image,
+                            new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height),
+                            // destination rectangle 
+                            0,
+                            0,           // upper-left corner of source rectangle
+                            image.Width,       // width of source rectangle
+                            image.Height,      // height of source rectangle
+                            GraphicsUnit.Pixel);*/
+                    }
+
+
+                }
+
+                public void LoadDat()
+		{           //hhhhhhm
+
+            //corresponds to Resources/Graphics/Enemies/(richTextBox5.text).dat
+            //requires the exe to be in the same folder as the 
+
+            string text = GRAPHICSENEMIES + richTextBox5.Text + ".dat";
+
+
+            try
+            {
+                this.LoadSpriteSheetFromDat(text);
+                this.pictureBox1.Image = this.image;
+                //useThisForDaImage.Image.Height *= 3;
+                this.pictureBox1.Dock = DockStyle.None;
+                //Graphics.
+                //this.pictureBox1.Size = this.image.Size;
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("{0}\n{1}", ex.Message, ex.StackTrace), "Image Loading Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+		}
+
+                private void button1_Click(object sender, EventArgs e)
+                {
+                    LoadDat();
+
+                }
 	}
 }

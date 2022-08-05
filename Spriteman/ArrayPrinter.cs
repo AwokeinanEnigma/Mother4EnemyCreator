@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Spriteman
+namespace M4EC
 {
 	// Token: 0x02000006 RID: 6
 	internal class ArrayPrinter
