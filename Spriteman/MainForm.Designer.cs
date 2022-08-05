@@ -26,6 +26,13 @@ namespace Spriteman
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.previewPanel = new System.Windows.Forms.Panel();
+            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
+            this.label39 = new System.Windows.Forms.Label();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.richTextBox13 = new System.Windows.Forms.RichTextBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -93,19 +100,17 @@ namespace Spriteman
             this.openImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveImageDialog = new System.Windows.Forms.SaveFileDialog();
             this.importImageDialog = new System.Windows.Forms.OpenFileDialog();
-            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
-            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
-            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
             this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             this.previewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
@@ -123,9 +128,6 @@ namespace Spriteman
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip
@@ -204,6 +206,8 @@ namespace Spriteman
             // previewPanel
             // 
             this.previewPanel.AutoScroll = true;
+            this.previewPanel.Controls.Add(this.label40);
+            this.previewPanel.Controls.Add(this.richTextBox14);
             this.previewPanel.Controls.Add(this.numericUpDown21);
             this.previewPanel.Controls.Add(this.label39);
             this.previewPanel.Controls.Add(this.numericUpDown10);
@@ -280,6 +284,66 @@ namespace Spriteman
             this.previewPanel.Name = "previewPanel";
             this.previewPanel.Size = new System.Drawing.Size(752, 543);
             this.previewPanel.TabIndex = 1;
+            // 
+            // numericUpDown21
+            // 
+            this.numericUpDown21.Location = new System.Drawing.Point(609, 396);
+            this.numericUpDown21.Name = "numericUpDown21";
+            this.numericUpDown21.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown21.TabIndex = 82;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(565, 398);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(43, 13);
+            this.label39.TabIndex = 81;
+            this.label39.Text = "Options";
+            // 
+            // numericUpDown10
+            // 
+            this.numericUpDown10.Location = new System.Drawing.Point(615, 372);
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown10.TabIndex = 80;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(556, 374);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(56, 13);
+            this.label38.TabIndex = 79;
+            this.label38.Text = "Immunities";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Enabled = false;
+            this.label15.Location = new System.Drawing.Point(160, 475);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(443, 13);
+            this.label15.TabIndex = 78;
+            this.label15.Text = "remember if it causes you pain to look at this, it caused me much more pain to ma" +
+    "ke - enigma";
+            this.label15.Visible = false;
+            // 
+            // numericUpDown20
+            // 
+            this.numericUpDown20.Location = new System.Drawing.Point(602, 169);
+            this.numericUpDown20.Name = "numericUpDown20";
+            this.numericUpDown20.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown20.TabIndex = 77;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(565, 172);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(33, 13);
+            this.label37.TabIndex = 76;
+            this.label37.Text = "Level";
             // 
             // label36
             // 
@@ -845,65 +909,22 @@ namespace Spriteman
             this.importImageDialog.Filter = "Image files|*.bmp;*.png";
             this.importImageDialog.Title = "Import Image";
             // 
-            // numericUpDown20
+            // label40
             // 
-            this.numericUpDown20.Location = new System.Drawing.Point(602, 169);
-            this.numericUpDown20.Name = "numericUpDown20";
-            this.numericUpDown20.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown20.TabIndex = 77;
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(267, 175);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(116, 13);
+            this.label40.TabIndex = 84;
+            this.label40.Text = "Overworld Sprite Name";
             // 
-            // label37
+            // richTextBox14
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(565, 172);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(33, 13);
-            this.label37.TabIndex = 76;
-            this.label37.Text = "Level";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Enabled = false;
-            this.label15.Location = new System.Drawing.Point(160, 475);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(443, 13);
-            this.label15.TabIndex = 78;
-            this.label15.Text = "remember if it causes you pain to look at this, it caused me much more pain to ma" +
-    "ke - enigma";
-            this.label15.Visible = false;
-            // 
-            // numericUpDown10
-            // 
-            this.numericUpDown10.Location = new System.Drawing.Point(615, 372);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown10.TabIndex = 80;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(556, 374);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(56, 13);
-            this.label38.TabIndex = 79;
-            this.label38.Text = "Immunities";
-            // 
-            // numericUpDown21
-            // 
-            this.numericUpDown21.Location = new System.Drawing.Point(609, 396);
-            this.numericUpDown21.Name = "numericUpDown21";
-            this.numericUpDown21.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown21.TabIndex = 82;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(565, 398);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(43, 13);
-            this.label39.TabIndex = 81;
-            this.label39.Text = "Options";
+            this.richTextBox14.Location = new System.Drawing.Point(389, 174);
+            this.richTextBox14.Name = "richTextBox14";
+            this.richTextBox14.Size = new System.Drawing.Size(102, 19);
+            this.richTextBox14.TabIndex = 83;
+            this.richTextBox14.Text = "";
             // 
             // MainForm
             // 
@@ -929,6 +950,9 @@ namespace Spriteman
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             this.previewPanel.ResumeLayout(false);
             this.previewPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
@@ -946,9 +970,6 @@ namespace Spriteman
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1056,5 +1077,7 @@ namespace Spriteman
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.NumericUpDown numericUpDown10;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.RichTextBox richTextBox14;
     }
 }
