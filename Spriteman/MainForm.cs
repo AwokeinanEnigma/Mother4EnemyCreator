@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -89,7 +90,7 @@ namespace Spriteman
 		// Token: 0x06000035 RID: 53 RVA: 0x00003EAC File Offset: 0x000020AC
 		private void LoadSpriteSheet(string filename)
 		{
-			if (Path.GetExtension(filename) == ".dat")
+			if (Path.GetExtension(filename) == ".edat")
 			{
 				try
 				{
@@ -140,6 +141,8 @@ namespace Spriteman
 
 			//Transfer(new NbtFloat("elec", (float)numericUpDown1.Value));
 
+            Trace.WriteLine("asfsaf sprite");
+
 			NbtCompound mods = rootTag.Get<NbtCompound>("modifiers");
 			Transfer(mods.Get<NbtFloat>("elec"), numericUpDown1);
 			Transfer(mods.Get<NbtFloat>("expl"), numericUpDown2);
@@ -179,6 +182,8 @@ namespace Spriteman
 
             TransferI(rootTag.Get<NbtInt>("imm"), numericUpDown10);
             TransferI(rootTag.Get<NbtInt>("opt"), numericUpDown21);
+            Console.WriteLine("loading sprite");
+            TransferStr(rootTag.Get<NbtString>("overworldspr"), richTextBox14);
 		}
 
 
@@ -259,8 +264,9 @@ namespace Spriteman
             rootTag.Add(new NbtInt("exp", (int)numericUpDown17.Value));
 			rootTag.Add(new NbtString("bgm", richTextBox4.Text));
             rootTag.Add(new NbtString("spr", richTextBox5.Text));
+            rootTag.Add(new NbtString("overworldspr", richTextBox14.Text));
 
-            rootTag.Add(new NbtInt("imm", (int)numericUpDown10.Value));
+			rootTag.Add(new NbtInt("imm", (int)numericUpDown10.Value));
             rootTag.Add(new NbtInt("opt", (int)numericUpDown21.Value));
 
 			nbtFile.SaveToFile(filename, NbtCompression.GZip);

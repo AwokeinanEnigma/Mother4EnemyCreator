@@ -26,6 +26,8 @@ namespace Spriteman
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.previewPanel = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
             this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
             this.label39 = new System.Windows.Forms.Label();
             this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
@@ -100,8 +102,6 @@ namespace Spriteman
             this.openImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveImageDialog = new System.Windows.Forms.SaveFileDialog();
             this.importImageDialog = new System.Windows.Forms.OpenFileDialog();
-            this.label40 = new System.Windows.Forms.Label();
-            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
             this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel2.SuspendLayout();
@@ -285,6 +285,23 @@ namespace Spriteman
             this.previewPanel.Size = new System.Drawing.Size(752, 543);
             this.previewPanel.TabIndex = 1;
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(267, 175);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(116, 13);
+            this.label40.TabIndex = 84;
+            this.label40.Text = "Overworld Sprite Name";
+            // 
+            // richTextBox14
+            // 
+            this.richTextBox14.Location = new System.Drawing.Point(389, 174);
+            this.richTextBox14.Name = "richTextBox14";
+            this.richTextBox14.Size = new System.Drawing.Size(102, 19);
+            this.richTextBox14.TabIndex = 83;
+            this.richTextBox14.Text = "";
+            // 
             // numericUpDown21
             // 
             this.numericUpDown21.Location = new System.Drawing.Point(609, 396);
@@ -332,6 +349,11 @@ namespace Spriteman
             // numericUpDown20
             // 
             this.numericUpDown20.Location = new System.Drawing.Point(602, 169);
+            this.numericUpDown20.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown20.Name = "numericUpDown20";
             this.numericUpDown20.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown20.TabIndex = 77;
@@ -494,6 +516,11 @@ namespace Spriteman
             // numericUpDown19
             // 
             this.numericUpDown19.Location = new System.Drawing.Point(600, 66);
+            this.numericUpDown19.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown19.Name = "numericUpDown19";
             this.numericUpDown19.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown19.TabIndex = 56;
@@ -554,6 +581,11 @@ namespace Spriteman
             // numericUpDown11
             // 
             this.numericUpDown11.Location = new System.Drawing.Point(589, 119);
+            this.numericUpDown11.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown11.TabIndex = 48;
@@ -570,6 +602,11 @@ namespace Spriteman
             // numericUpDown12
             // 
             this.numericUpDown12.Location = new System.Drawing.Point(589, 92);
+            this.numericUpDown12.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown12.TabIndex = 46;
@@ -586,6 +623,11 @@ namespace Spriteman
             // numericUpDown13
             // 
             this.numericUpDown13.Location = new System.Drawing.Point(609, 248);
+            this.numericUpDown13.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown13.Name = "numericUpDown13";
             this.numericUpDown13.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown13.TabIndex = 44;
@@ -602,6 +644,11 @@ namespace Spriteman
             // numericUpDown14
             // 
             this.numericUpDown14.Location = new System.Drawing.Point(589, 222);
+            this.numericUpDown14.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown14.Name = "numericUpDown14";
             this.numericUpDown14.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown14.TabIndex = 42;
@@ -618,6 +665,11 @@ namespace Spriteman
             // numericUpDown15
             // 
             this.numericUpDown15.Location = new System.Drawing.Point(615, 196);
+            this.numericUpDown15.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown15.Name = "numericUpDown15";
             this.numericUpDown15.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown15.TabIndex = 40;
@@ -634,6 +686,11 @@ namespace Spriteman
             // numericUpDown16
             // 
             this.numericUpDown16.Location = new System.Drawing.Point(602, 144);
+            this.numericUpDown16.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown16.Name = "numericUpDown16";
             this.numericUpDown16.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown16.TabIndex = 38;
@@ -641,6 +698,11 @@ namespace Spriteman
             // numericUpDown17
             // 
             this.numericUpDown17.Location = new System.Drawing.Point(333, 97);
+            this.numericUpDown17.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown17.Name = "numericUpDown17";
             this.numericUpDown17.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown17.TabIndex = 37;
@@ -648,6 +710,11 @@ namespace Spriteman
             // numericUpDown18
             // 
             this.numericUpDown18.Location = new System.Drawing.Point(615, 41);
+            this.numericUpDown18.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown18.Name = "numericUpDown18";
             this.numericUpDown18.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown18.TabIndex = 36;
@@ -908,23 +975,6 @@ namespace Spriteman
             // 
             this.importImageDialog.Filter = "Image files|*.bmp;*.png";
             this.importImageDialog.Title = "Import Image";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(267, 175);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(116, 13);
-            this.label40.TabIndex = 84;
-            this.label40.Text = "Overworld Sprite Name";
-            // 
-            // richTextBox14
-            // 
-            this.richTextBox14.Location = new System.Drawing.Point(389, 174);
-            this.richTextBox14.Name = "richTextBox14";
-            this.richTextBox14.Size = new System.Drawing.Size(102, 19);
-            this.richTextBox14.TabIndex = 83;
-            this.richTextBox14.Text = "";
             // 
             // MainForm
             // 
