@@ -189,8 +189,8 @@ namespace M4EC
             this.splitContainer.Panel2.Controls.Add(this.numericUpDown6);
             this.splitContainer.Panel2.Controls.Add(this.label11);
             this.splitContainer.Panel2MinSize = 120;
-            this.splitContainer.Size = new System.Drawing.Size(819, 543);
-            this.splitContainer.SplitterDistance = 328;
+            this.splitContainer.Size = new System.Drawing.Size(819, 625);
+            this.splitContainer.SplitterDistance = 377;
             this.splitContainer.TabIndex = 2;
             this.splitContainer.TabStop = false;
             // 
@@ -294,7 +294,7 @@ namespace M4EC
             this.previewPanel.Location = new System.Drawing.Point(0, 25);
             this.previewPanel.Name = "previewPanel";
             this.previewPanel.Padding = new System.Windows.Forms.Padding(1);
-            this.previewPanel.Size = new System.Drawing.Size(819, 543);
+            this.previewPanel.Size = new System.Drawing.Size(819, 625);
             this.previewPanel.TabIndex = 1;
             // 
             // label41
@@ -390,7 +390,7 @@ namespace M4EC
             // numericUpDown20
             // 
             this.numericUpDown20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown20.Location = new System.Drawing.Point(298, 434);
+            this.numericUpDown20.Location = new System.Drawing.Point(303, 443);
             this.numericUpDown20.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -404,7 +404,7 @@ namespace M4EC
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label37.Location = new System.Drawing.Point(250, 433);
+            this.label37.Location = new System.Drawing.Point(255, 442);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(42, 18);
             this.label37.TabIndex = 76;
@@ -567,7 +567,7 @@ namespace M4EC
             // numericUpDown19
             // 
             this.numericUpDown19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown19.Location = new System.Drawing.Point(298, 311);
+            this.numericUpDown19.Location = new System.Drawing.Point(303, 320);
             this.numericUpDown19.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -636,7 +636,7 @@ namespace M4EC
             // numericUpDown11
             // 
             this.numericUpDown11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown11.Location = new System.Drawing.Point(279, 371);
+            this.numericUpDown11.Location = new System.Drawing.Point(284, 380);
             this.numericUpDown11.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -650,7 +650,7 @@ namespace M4EC
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label17.Location = new System.Drawing.Point(250, 371);
+            this.label17.Location = new System.Drawing.Point(255, 380);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 18);
             this.label17.TabIndex = 47;
@@ -659,7 +659,7 @@ namespace M4EC
             // numericUpDown12
             // 
             this.numericUpDown12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown12.Location = new System.Drawing.Point(286, 343);
+            this.numericUpDown12.Location = new System.Drawing.Point(291, 352);
             this.numericUpDown12.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -673,7 +673,7 @@ namespace M4EC
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label18.Location = new System.Drawing.Point(251, 343);
+            this.label18.Location = new System.Drawing.Point(256, 352);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(29, 18);
             this.label18.TabIndex = 45;
@@ -682,7 +682,7 @@ namespace M4EC
             // numericUpDown13
             // 
             this.numericUpDown13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown13.Location = new System.Drawing.Point(306, 517);
+            this.numericUpDown13.Location = new System.Drawing.Point(311, 526);
             this.numericUpDown13.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -696,7 +696,7 @@ namespace M4EC
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label19.Location = new System.Drawing.Point(251, 517);
+            this.label19.Location = new System.Drawing.Point(256, 526);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(50, 18);
             this.label19.TabIndex = 43;
@@ -705,7 +705,7 @@ namespace M4EC
             // numericUpDown14
             // 
             this.numericUpDown14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown14.Location = new System.Drawing.Point(283, 489);
+            this.numericUpDown14.Location = new System.Drawing.Point(288, 498);
             this.numericUpDown14.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -719,7 +719,7 @@ namespace M4EC
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label20.Location = new System.Drawing.Point(250, 489);
+            this.label20.Location = new System.Drawing.Point(255, 498);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(28, 18);
             this.label20.TabIndex = 41;
@@ -728,7 +728,7 @@ namespace M4EC
             // numericUpDown15
             // 
             this.numericUpDown15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown15.Location = new System.Drawing.Point(316, 461);
+            this.numericUpDown15.Location = new System.Drawing.Point(321, 470);
             this.numericUpDown15.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -742,7 +742,7 @@ namespace M4EC
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label21.Location = new System.Drawing.Point(250, 463);
+            this.label21.Location = new System.Drawing.Point(255, 472);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(60, 18);
             this.label21.TabIndex = 39;
@@ -751,7 +751,7 @@ namespace M4EC
             // numericUpDown16
             // 
             this.numericUpDown16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown16.Location = new System.Drawing.Point(296, 403);
+            this.numericUpDown16.Location = new System.Drawing.Point(301, 412);
             this.numericUpDown16.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -777,7 +777,7 @@ namespace M4EC
             // numericUpDown18
             // 
             this.numericUpDown18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown18.Location = new System.Drawing.Point(320, 274);
+            this.numericUpDown18.Location = new System.Drawing.Point(325, 283);
             this.numericUpDown18.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -791,7 +791,7 @@ namespace M4EC
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label22.Location = new System.Drawing.Point(250, 403);
+            this.label22.Location = new System.Drawing.Point(255, 412);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(40, 18);
             this.label22.TabIndex = 35;
@@ -801,7 +801,7 @@ namespace M4EC
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label23.Location = new System.Drawing.Point(251, 310);
+            this.label23.Location = new System.Drawing.Point(256, 319);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(40, 18);
             this.label23.TabIndex = 34;
@@ -811,7 +811,7 @@ namespace M4EC
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label24.Location = new System.Drawing.Point(251, 277);
+            this.label24.Location = new System.Drawing.Point(256, 286);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(63, 18);
             this.label24.TabIndex = 33;
@@ -821,7 +821,7 @@ namespace M4EC
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial Black", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label16.Location = new System.Drawing.Point(330, 243);
+            this.label16.Location = new System.Drawing.Point(335, 252);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 28);
             this.label16.TabIndex = 32;
@@ -832,7 +832,7 @@ namespace M4EC
             this.numericUpDown9.DecimalPlaces = 3;
             this.numericUpDown9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown9.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown9.Location = new System.Drawing.Point(76, 375);
+            this.numericUpDown9.Location = new System.Drawing.Point(76, 382);
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown9.TabIndex = 29;
@@ -844,7 +844,7 @@ namespace M4EC
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(7, 375);
+            this.label14.Location = new System.Drawing.Point(7, 382);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 18);
             this.label14.TabIndex = 28;
@@ -856,7 +856,7 @@ namespace M4EC
             this.numericUpDown8.DecimalPlaces = 3;
             this.numericUpDown8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown8.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown8.Location = new System.Drawing.Point(46, 344);
+            this.numericUpDown8.Location = new System.Drawing.Point(46, 351);
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown8.TabIndex = 27;
@@ -868,7 +868,7 @@ namespace M4EC
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(7, 344);
+            this.label13.Location = new System.Drawing.Point(7, 351);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 18);
             this.label13.TabIndex = 26;
@@ -880,7 +880,7 @@ namespace M4EC
             this.numericUpDown7.DecimalPlaces = 3;
             this.numericUpDown7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown7.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown7.Location = new System.Drawing.Point(48, 508);
+            this.numericUpDown7.Location = new System.Drawing.Point(48, 515);
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown7.TabIndex = 25;
@@ -891,7 +891,7 @@ namespace M4EC
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(7, 508);
+            this.label12.Location = new System.Drawing.Point(7, 515);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 18);
             this.label12.TabIndex = 24;
@@ -902,7 +902,7 @@ namespace M4EC
             this.numericUpDown5.DecimalPlaces = 3;
             this.numericUpDown5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown5.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown5.Location = new System.Drawing.Point(68, 473);
+            this.numericUpDown5.Location = new System.Drawing.Point(68, 480);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown5.TabIndex = 23;
@@ -913,7 +913,7 @@ namespace M4EC
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(7, 473);
+            this.label10.Location = new System.Drawing.Point(7, 480);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 18);
             this.label10.TabIndex = 22;
@@ -924,7 +924,7 @@ namespace M4EC
             this.numericUpDown4.DecimalPlaces = 3;
             this.numericUpDown4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown4.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown4.Location = new System.Drawing.Point(72, 438);
+            this.numericUpDown4.Location = new System.Drawing.Point(72, 445);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown4.TabIndex = 21;
@@ -935,7 +935,7 @@ namespace M4EC
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(7, 438);
+            this.label9.Location = new System.Drawing.Point(7, 445);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 18);
             this.label9.TabIndex = 20;
@@ -946,7 +946,7 @@ namespace M4EC
             this.numericUpDown3.DecimalPlaces = 3;
             this.numericUpDown3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown3.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown3.Location = new System.Drawing.Point(40, 408);
+            this.numericUpDown3.Location = new System.Drawing.Point(40, 415);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown3.TabIndex = 19;
@@ -956,7 +956,7 @@ namespace M4EC
             this.numericUpDown2.DecimalPlaces = 3;
             this.numericUpDown2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown2.Location = new System.Drawing.Point(84, 311);
+            this.numericUpDown2.Location = new System.Drawing.Point(84, 318);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown2.TabIndex = 18;
@@ -967,7 +967,7 @@ namespace M4EC
             this.numericUpDown1.DecimalPlaces = 3;
             this.numericUpDown1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDown1.Location = new System.Drawing.Point(84, 277);
+            this.numericUpDown1.Location = new System.Drawing.Point(84, 284);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 17;
@@ -976,7 +976,7 @@ namespace M4EC
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Black", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(47, 245);
+            this.label8.Location = new System.Drawing.Point(47, 252);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 28);
             this.label8.TabIndex = 16;
@@ -988,7 +988,7 @@ namespace M4EC
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(7, 408);
+            this.label7.Location = new System.Drawing.Point(7, 415);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 18);
             this.label7.TabIndex = 14;
@@ -1000,7 +1000,7 @@ namespace M4EC
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(7, 311);
+            this.label6.Location = new System.Drawing.Point(7, 318);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 18);
             this.label6.TabIndex = 12;
@@ -1012,7 +1012,7 @@ namespace M4EC
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(7, 280);
+            this.label5.Location = new System.Drawing.Point(7, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 18);
             this.label5.TabIndex = 10;
@@ -1058,7 +1058,7 @@ namespace M4EC
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(416, 247);
+            this.label1.Location = new System.Drawing.Point(661, 608);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 2;
@@ -1068,7 +1068,7 @@ namespace M4EC
             // richTextBox1
             // 
             this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(484, 245);
+            this.richTextBox1.Location = new System.Drawing.Point(729, 606);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(102, 19);
             this.richTextBox1.TabIndex = 1;
@@ -1094,7 +1094,6 @@ namespace M4EC
             this.label15.TabIndex = 78;
             this.label15.Text = "remember if it causes you pain to look at this, it caused me much more pain to ma" +
     "ke - enigma";
-            this.label15.Visible = true;
             // 
             // openImageDialog
             // 
@@ -1115,7 +1114,7 @@ namespace M4EC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 568);
+            this.ClientSize = new System.Drawing.Size(819, 650);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.previewPanel);
             this.Controls.Add(this.splitContainer);
