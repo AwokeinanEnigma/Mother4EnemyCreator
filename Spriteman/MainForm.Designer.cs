@@ -2,10 +2,8 @@
 
 namespace M4EC
 {
-	// Token: 0x02000008 RID: 8
 	public partial class MainForm : global::System.Windows.Forms.Form
 	{
-		// Token: 0x0600003E RID: 62 RVA: 0x00004A61 File Offset: 0x00002C61
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -14,8 +12,6 @@ namespace M4EC
 			}
 			base.Dispose(disposing);
 		}
-
-		// Token: 0x0600003F RID: 63 RVA: 0x00004A80 File Offset: 0x00002C80
 		private void InitializeComponent()
 		{
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -1161,35 +1157,15 @@ namespace M4EC
             this.PerformLayout();
 
 		}
-
-		// Token: 0x04000020 RID: 32
 		private global::System.ComponentModel.IContainer components;
-
-		// Token: 0x04000021 RID: 33
 		private global::System.Windows.Forms.ToolStrip toolStrip;
-
-		// Token: 0x04000022 RID: 34
 		private global::System.Windows.Forms.SplitContainer splitContainer;
-
-		// Token: 0x0400002C RID: 44
 		private global::System.Windows.Forms.ToolStripButton openButton;
-
-		// Token: 0x0400002D RID: 45
 		private global::System.Windows.Forms.ToolStripButton saveButton;
-
-		// Token: 0x0400002E RID: 46
 		private global::System.Windows.Forms.ToolStripButton saveAsButton;
-
-		// Token: 0x04000032 RID: 50
 		private global::System.Windows.Forms.OpenFileDialog openImageDialog;
-
-		// Token: 0x04000033 RID: 51
 		private global::System.Windows.Forms.SaveFileDialog saveImageDialog;
-
-		// Token: 0x04000039 RID: 57
 		private global::System.Windows.Forms.OpenFileDialog importImageDialog;
-
-		// Token: 0x0400003B RID: 59
 		private global::System.Windows.Forms.Panel previewPanel;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;

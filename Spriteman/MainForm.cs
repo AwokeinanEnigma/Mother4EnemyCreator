@@ -13,10 +13,9 @@ using M4EC.Properties;
 
 namespace M4EC
 {
-	// Token: 0x02000008 RID: 8
 	public partial class MainForm : Form
 	{
-        public static readonly string RESOURCES = "Resources" + Path.DirectorySeparatorChar;
+        public static readonly string RESOURCES = "Data" + Path.DirectorySeparatorChar;
         public static readonly string GRAPHICS = Path.Combine(RESOURCES, "Graphics", "") + Path.DirectorySeparatorChar;
 		public static readonly string GRAPHICSENEMIES = GRAPHICS + "Enemies" + Path.DirectorySeparatorChar;
 
@@ -24,8 +23,6 @@ namespace M4EC
 		{
 			this.InitializeComponent();
 		}
-
-		// Token: 0x06000025 RID: 37 RVA: 0x0000372C File Offset: 0x0000192C
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			this.activePalette = 0;
@@ -39,8 +36,6 @@ namespace M4EC
 				}
 			}
 		}
-
-		// Token: 0x06000026 RID: 38 RVA: 0x0000375F File Offset: 0x0000195F
 		private void spriteList_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.KeyCode == Keys.Delete)
@@ -48,8 +43,6 @@ namespace M4EC
 				MessageBox.Show("delete");
 			}
 		}
-
-		// Token: 0x06000027 RID: 39 RVA: 0x00003778 File Offset: 0x00001978
 		private void LoadFile(string filename)
 		{
 			this.isLoaded = false;
@@ -60,8 +53,6 @@ namespace M4EC
 				this.saveAsButton.Enabled = true;
 			}
 		}
-
-		// Token: 0x06000028 RID: 40 RVA: 0x000037D7 File Offset: 0x000019D7
 		private void openButton_Click(object sender, EventArgs e)
 		{
 			if (this.openImageDialog.ShowDialog(this) == DialogResult.OK)
@@ -69,8 +60,6 @@ namespace M4EC
 				this.LoadFile(this.openImageDialog.FileName);
 			}
 		}
-
-		// Token: 0x06000029 RID: 41 RVA: 0x000037F9 File Offset: 0x000019F9
 		private void saveButton_Click(object sender, EventArgs e)
 		{
 			if (this.workingFileName != null)
@@ -80,8 +69,6 @@ namespace M4EC
 			}
 			this.saveAsButton_Click(sender, e);
 		}
-
-		// Token: 0x0600002A RID: 42 RVA: 0x00003818 File Offset: 0x00001A18
 		private void saveAsButton_Click(object sender, EventArgs e)
 		{
 			if (this.saveImageDialog.ShowDialog(this) == DialogResult.OK)
@@ -90,9 +77,6 @@ namespace M4EC
 				this.workingFileName = this.saveImageDialog.FileName;
 			}
 		}
-
-
-		// Token: 0x06000035 RID: 53 RVA: 0x00003EAC File Offset: 0x000020AC
 		private void LoadSpriteSheet(string filename)
 		{
 			if (Path.GetExtension(filename) == ".edat")
@@ -113,10 +97,6 @@ namespace M4EC
 				}
 			}
 		}
-
-
-
-		// Token: 0x06000037 RID: 55 RVA: 0x00003F78 File Offset: 0x00002178
 
         public void Transfer(NbtFloat fo, NumericUpDown nud)
         {
@@ -147,8 +127,6 @@ namespace M4EC
         {
             nud.Value = (decimal)fo.Value;
         }
-
-		// Token: 0x06000038 RID: 56 RVA: 0x0000408C File Offset: 0x0000228C
 		private void LoadEnemyDataFromEDat(string filename)
 		{
             NbtCompound rootTag = new NbtFile(filename).RootTag;
@@ -202,9 +180,6 @@ namespace M4EC
 
             LoadDat();
         }
-
-
-		// Token: 0x0600003A RID: 58 RVA: 0x00004550 File Offset: 0x00002750
 		private void InitializePalette()
 		{
 			List<Color> list = new List<Color>();
@@ -234,8 +209,6 @@ namespace M4EC
 			this.palettes.Add(list);
 			this.activePalette = 0;
 		}
-
-		// Token: 0x0600003B RID: 59 RVA: 0x0000462C File Offset: 0x0000282C
 		private void SaveSpriteSheet(string filename)
 		{
 			NbtFile nbtFile = new NbtFile();
@@ -289,10 +262,6 @@ namespace M4EC
 
 			nbtFile.SaveToFile(filename, NbtCompression.GZip);
 		}
-
-
-
-		// Token: 0x0600003D RID: 61 RVA: 0x000049E8 File Offset: 0x00002BE8
 		private void RemapColors(List<Tuple<int, int>> remap)
 		{
 			for (int i = 0; i < remap.Count; i++)
@@ -311,23 +280,11 @@ namespace M4EC
 				}
 			}
 		}
-
-		// Token: 0x0400001A RID: 26
 		private bool isLoaded;
-
-		// Token: 0x0400001B RID: 27
 		private string workingFileName;
-
-		// Token: 0x0400001C RID: 28
 		private Bitmap image;
-
-		// Token: 0x0400001D RID: 29
 		private List<List<Color>> palettes;
-
-		// Token: 0x0400001E RID: 30
 		private int activePalette;
-
-		// Token: 0x0400001F RID: 31
 		private byte[] indices;
 
 		private void numericUpDown8_ValueChanged(object sender, EventArgs e)
@@ -463,15 +420,6 @@ namespace M4EC
                     e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
                     if (image != null)
                     {
-                        /*e.Graphics.DrawImage(
-                            image,
-                            new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height),
-                            // destination rectangle 
-                            0,
-                            0,           // upper-left corner of source rectangle
-                            image.Width,       // width of source rectangle
-                            image.Height,      // height of source rectangle
-                            GraphicsUnit.Pixel);*/
                     }
 
 

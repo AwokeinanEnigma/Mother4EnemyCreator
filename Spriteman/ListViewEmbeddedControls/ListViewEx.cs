@@ -7,14 +7,10 @@ using System.Windows.Forms;
 
 namespace ListViewEmbeddedControls
 {
-	// Token: 0x02000002 RID: 2
 	public class ListViewEx : ListView
 	{
-		// Token: 0x06000001 RID: 1
 		[DllImport("user32.dll")]
 		private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wPar, IntPtr lPar);
-
-		// Token: 0x06000002 RID: 2 RVA: 0x00002050 File Offset: 0x00000250
 		protected int[] GetColumnOrder()
 		{
 			IntPtr intPtr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(int)) * base.Columns.Count);
@@ -28,8 +24,6 @@ namespace ListViewEmbeddedControls
 			Marshal.FreeHGlobal(intPtr);
 			return array;
 		}
-
-		// Token: 0x06000003 RID: 3 RVA: 0x000020DC File Offset: 0x000002DC
 		protected Rectangle GetSubItemBounds(ListViewItem Item, int SubItem)
 		{
 			Rectangle empty = Rectangle.Empty;
@@ -61,14 +55,10 @@ namespace ListViewEmbeddedControls
 			empty = new Rectangle(num, bounds.Top, base.Columns[columnOrder[i]].Width, bounds.Height);
 			return empty;
 		}
-
-		// Token: 0x06000004 RID: 4 RVA: 0x0000219D File Offset: 0x0000039D
 		public void AddEmbeddedControl(Control c, int col, int row)
 		{
 			this.AddEmbeddedControl(c, col, row, DockStyle.Fill);
 		}
-
-		// Token: 0x06000005 RID: 5 RVA: 0x000021AC File Offset: 0x000003AC
 		public void AddEmbeddedControl(Control c, int col, int row, DockStyle dock)
 		{
 			if (c == null)
@@ -89,8 +79,6 @@ namespace ListViewEmbeddedControls
 			c.Click += this._embeddedControl_Click;
 			base.Controls.Add(c);
 		}
-
-		// Token: 0x06000006 RID: 6 RVA: 0x00002248 File Offset: 0x00000448
 		public void RemoveEmbeddedControl(Control c)
 		{
 			if (c == null)
@@ -109,8 +97,6 @@ namespace ListViewEmbeddedControls
 			}
 			throw new Exception("Control not found!");
 		}
-
-		// Token: 0x06000007 RID: 7 RVA: 0x000022C4 File Offset: 0x000004C4
 		public Control GetEmbeddedControl(int col, int row)
 		{
 			foreach (object obj in this._embeddedControls)
@@ -123,8 +109,6 @@ namespace ListViewEmbeddedControls
 			}
 			return null;
 		}
-
-		// Token: 0x17000001 RID: 1
 		// (get) Token: 0x06000008 RID: 8 RVA: 0x00002334 File Offset: 0x00000534
 		// (set) Token: 0x06000009 RID: 9 RVA: 0x0000233C File Offset: 0x0000053C
 		[DefaultValue(View.LargeIcon)]
@@ -143,8 +127,6 @@ namespace ListViewEmbeddedControls
 				base.View = value;
 			}
 		}
-
-		// Token: 0x0600000A RID: 10 RVA: 0x000023A4 File Offset: 0x000005A4
 		protected override void WndProc(ref Message m)
 		{
 			if (m.Msg == 15 && this.View == View.Details)
@@ -186,8 +168,6 @@ namespace ListViewEmbeddedControls
 			}
 			base.WndProc(ref m);
 		}
-
-		// Token: 0x0600000B RID: 11 RVA: 0x00002544 File Offset: 0x00000744
 		private void _embeddedControl_Click(object sender, EventArgs e)
 		{
 			foreach (object obj in this._embeddedControls)
@@ -200,35 +180,16 @@ namespace ListViewEmbeddedControls
 				}
 			}
 		}
-
-		// Token: 0x04000001 RID: 1
 		private const int LVM_FIRST = 4096;
-
-		// Token: 0x04000002 RID: 2
 		private const int LVM_GETCOLUMNORDERARRAY = 4155;
-
-		// Token: 0x04000003 RID: 3
 		private const int WM_PAINT = 15;
-
-		// Token: 0x04000004 RID: 4
 		private ArrayList _embeddedControls = new ArrayList();
-
-		// Token: 0x02000010 RID: 16
 		private struct EmbeddedControl
 		{
-			// Token: 0x04000085 RID: 133
 			public Control Control;
-
-			// Token: 0x04000086 RID: 134
 			public int Column;
-
-			// Token: 0x04000087 RID: 135
 			public int Row;
-
-			// Token: 0x04000088 RID: 136
 			public DockStyle Dock;
-
-			// Token: 0x04000089 RID: 137
 			public ListViewItem Item;
 		}
 	}
